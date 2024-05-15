@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@daitoue/utils": "^0.0.1",
+    "@daitoue/utils": "^0.0.2",
     "ant-design-vue": "4.x",
     "vue": "^3.4.21",
     "vue-router": "4"

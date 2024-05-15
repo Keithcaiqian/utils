@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@daitoue/utils':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   ant-design-vue:
     specifier: 4.x
     version: 4.2.1(vue@3.4.21)
@@ -95,8 +95,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@daitoue/utils@0.0.1:
-    resolution: {integrity: sha512-tG6cPussLUFzuOkSMk12zp/3D8rIgf2DEIemP+o/ozXDUW/1gIpbz5qtxASjBplpnNukvYLdMxHlckgPxV2Gbw==}
+  /@daitoue/utils@0.0.2:
+    resolution: {integrity: sha512-rHWzZGqOwCHdP/w6VXcsmfT0Y83VQne6f4xNDH9xuTBUIALmYBWo/xiDdjHuImGgOCT5uILYSHpozlY8zpL6tw==}
     dev: false
 
   /@emotion/hash@0.9.1:

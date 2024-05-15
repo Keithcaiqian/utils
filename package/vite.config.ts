@@ -9,5 +9,5 @@ export default defineConfig({
       fileName: 'index'
     }
   },
-  plugins: [dts({ rollupTypes: true })]
+  plugins: [dts()]
 })

@@ -1,16 +1,14 @@
 {
   "name": "@daitoue/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "files": [
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
-  "types": "./index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "types": "./index.d.ts",
     "import": "./dist/index.js",
     "require": "./dist/index.umd.cjs"
   },
