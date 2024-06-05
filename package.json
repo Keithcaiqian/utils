@@ -1,25 +1,33 @@
 {
-  "name": "utils",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@daitoue/utils",
+  "version": "0.0.2",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.umd.cjs"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@daitoue/utils": "^0.0.2",
-    "ant-design-vue": "4.x",
-    "vue": "^3.4.21",
-    "vue-router": "4"
+    "build": "tsc && vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "@vitejs/plugin-vue": "^5.0.4",
     "less": "^4.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vue-tsc": "^2.0.6"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.9.1",
+    "vitepress": "^1.2.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

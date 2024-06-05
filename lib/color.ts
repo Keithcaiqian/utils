@@ -3,8 +3,6 @@
 */
 export function HexToRgb(str: string) {
 	const r = /^#([A-Fa-f0-9]{6})$/;
-	r.test(str);
-
 	//test方法检查在字符串中是否存在一个模式，如果存在则返回true，否则返回false
 	if (!r.test(str)) return false;
 
@@ -15,14 +13,17 @@ export function HexToRgb(str: string) {
 	let hxs: any = str.match(/../g);
 
 	for (let i = 0; i < 3; i++) hxs[i] = parseInt(hxs[i], 16);
-
-	return hxs;
+	return `rgb(${hxs})`;
 }
 
 /**
  * GRB颜色转Hex颜色
 */
-export function RgbToHex(a: number, b: number, c: number) {
+export function RgbToHex(rgb: string) {
+	console.log("rgb", rgb)
+	const hexString = rgb.match(/\(([^)]*)\)/);
+	const hexArr = hexString![1].split(",");
+	let a = Number(hexArr[0]), b = Number(hexArr[1]), c = Number(hexArr[2]);
 	let r = /^\d{1,3}$/;
 
 	if (!r.test(a.toString()) || !r.test(b.toString()) || !r.test(c.toString())) return false;
@@ -42,13 +43,14 @@ export function getDarkColor(color: string, level: number) {
 
 	if (!r.test(color)) return false;
 
-	let rgbc = HexToRgb(color);
+	let rgbc: string = HexToRgb(color) as string;
+	rgbc = rgbc.match(/\(([^)]*)\)/)![1];
+	const rgb = rgbc.split(",").map(item => Number(item));
 
 	//floor 向下取整
-
-	for (let i = 0; i < 3; i++) rgbc[i] = Math.floor(rgbc[i] * (1 - level));
-
-	return RgbToHex(rgbc[0], rgbc[1], rgbc[2]);
+	
+	for (let i = 0; i < 3; i++) rgb[i] = Math.floor(rgb[i] * (1 - level));
+	return RgbToHex(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
 }
 
 /**
@@ -59,9 +61,12 @@ export function getLightColor(color: string, level: number) {
 
 	if (!r.test(color)) return false;
 
-	let rgbc = HexToRgb(color);
+	let rgbc: string = HexToRgb(color) as string;
+	rgbc = rgbc.match(/\(([^)]*)\)/)![1];
+	const rgb = rgbc.split(",").map(item => Number(item));
 
-	for (let i = 0; i < 3; i++) rgbc[i] = Math.floor((255 - rgbc[i]) * level + rgbc[i]);
 
-	return RgbToHex(rgbc[0], rgbc[1], rgbc[2]);
+	for (let i = 0; i < 3; i++) rgb[i] = Math.floor((255 - rgb[i]) * level + rgb[i]);
+
+	return RgbToHex(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
 }

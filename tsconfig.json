@@ -5,14 +5,15 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-
+    "declaration": true,
+    "outDir": "./dist/index.js",
+  
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
 
     /* Linting */
     "strict": true,
@@ -21,12 +22,14 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./",
     "paths":{
-      "@": ["src"],
-      "@/*": ["src/*"],
-      "$": ["package"],
-      "$/*": ["package/*"],
+      "@": ["lib"],
+      "@/*": ["lib/*"]
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "lib/**/*.ts", 
+    "lib/**/*.d.ts",
+    "lib/**/*.tsx",
+    "lib/**/*.vue"
+  ]
 }
