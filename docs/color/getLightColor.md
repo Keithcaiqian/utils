@@ -18,13 +18,12 @@ hex格式的颜色 例如 #ff0000
 
 ### demo
 
-<div class="container">
+<div class="demo">
     <div>输入的颜色</div>
-    <input v-model="hex">
+    <input type="text" v-model="hex">
     <div>变浅的程度</div>
-    <input v-model="deep">
-    <div>输出</div>
-    <input :value="rgb">
+    <input type="text" v-model="deep">
+    <pre>{{rgb}}</pre>
     <div class="box" :style="{background: rgb}"></div>
 </div>
 
@@ -37,13 +36,7 @@ hex格式的颜色 例如 #ff0000
 </script>
 
 <style lang="less" scoped>
-    .container {
-        padding: 14px;
-        background: #888;
-        margin-top: 14px;
-        input {
-            border: 1px solid blue;
-        }
+    .demo {
         .box {
             width: 30px;
             height: 30px;

@@ -17,11 +17,9 @@ rgb颜色格式 例如 rgb(255,0,0)
 
 ### demo
 
-<div class="container">
-    <div>输入</div>
-    <input v-model="hex">
-    <div>输出</div>
-    <input :value="rgb">
+<div class="demo">
+    <input type="text" v-model="hex">
+    <pre>{{rgb}}</pre>
 </div>
 
 <script lang="ts" setup>
@@ -30,17 +28,6 @@ rgb颜色格式 例如 rgb(255,0,0)
     const hex = ref("#ff0000");
     const rgb = computed(() => HexToRgb(hex.value))
 </script>
-
-<style lang="less" scoped>
-    .container {
-        padding: 14px;
-        background: #888;
-        margin-top: 14px;
-        input {
-            border: 1px solid blue;
-        }
-    }
-</style>
 
 ### 使用
 ```
