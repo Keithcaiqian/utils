@@ -2,11 +2,10 @@
 outline: deep
 ---
 
+hex颜色格式变深
 ```
 getDarkColor(color: string, level: number): string
 ```
-
-hex颜色格式变深
 
 ### 参数
 color:  hex颜色格式,例如 #ff0000

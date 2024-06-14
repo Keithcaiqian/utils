@@ -20,6 +20,12 @@ export default defineConfig({
           { text: 'getDarkColor', link: '/color/getDarkColor' },
           { text: 'getLightColor', link: '/color/getLightColor' },
         ]
+      },
+      {
+        text: '数据转化',
+        items: [
+          { text: 'arrayToTree', link: '/dataTransform/arrayToTree' },
+        ]
       }
     ],
 

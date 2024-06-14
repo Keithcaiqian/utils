@@ -2,11 +2,10 @@
 outline: deep
 ---
 
+rgb颜色格式转成hex颜色格式
 ```
 RgbToHex(str: string): string
 ```
-
-rgb颜色格式转成hex颜色格式
 
 ### 参数
 str:  rgb颜色格式,例如 rgb(255,0,0)
