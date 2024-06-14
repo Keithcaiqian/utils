@@ -1,6 +1,6 @@
 {
   "name": "@daitoue/utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "author": "daitoue",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "vite-plugin-dts": "^3.9.1",
     "vitepress": "^1.2.3"
   },
-  "homepage": "https://utils-keithcaiqians-projects.vercel.app/",
+  "homepage": "https://utils.tiancai.asia",
   "repository": {
     "type": "git",
     "url": "https://github.com/Keithcaiqian/utils"

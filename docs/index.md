@@ -10,3 +10,9 @@ hero:
       link: /color/HexToRgb
 ---
 
+***下载包***
+
+```
+npm install @daitoue/utils
+```
+
