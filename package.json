@@ -1,10 +1,11 @@
 {
   "name": "@daitoue/utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "author": "daitoue",
   "license": "MIT",
   "description": "自用的常用方法",
+  "keywords": ["color", "data", "transform"],
   "files": [
     "dist"
   ],
@@ -30,6 +31,7 @@
     "vite-plugin-dts": "^3.9.1",
     "vitepress": "^1.2.3"
   },
+  "homepage": "https://github.com/Keithcaiqian/utils",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
