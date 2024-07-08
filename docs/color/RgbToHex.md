@@ -24,6 +24,7 @@ hex颜色格式 例如 #ff0000
 <script lang="ts" setup>
     import { RgbToHex } from '../../lib/color.ts';
     import { ref, computed } from 'vue';
+    window.RgbToHex = RgbToHex;
     const rgb = ref("rgb(255,0,0)");
     const hex = computed(() => RgbToHex(rgb.value))
 </script>

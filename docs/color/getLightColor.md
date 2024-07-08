@@ -29,6 +29,7 @@ hex格式的颜色 例如 #ff0000
 <script lang="ts" setup>
     import { getLightColor } from '../../lib/color.ts';
     import { ref, computed } from 'vue';
+    window.getLightColor = getLightColor;
     const hex = ref("#ff0000");
     const deep = ref(0.1);
     const rgb = computed(() => getLightColor(hex.value, deep.value))

@@ -26,6 +26,13 @@ export default defineConfig({
         items: [
           { text: 'arrayToTree', link: '/dataTransform/arrayToTree' },
         ]
+      },
+      {
+        text: '文件',
+        items: [
+          { text: 'downloadPicture', link: '/file/downloadPicture' },
+          { text: 'downloadFile', link: '/file/downloadFile' },
+        ]
       }
     ],
 

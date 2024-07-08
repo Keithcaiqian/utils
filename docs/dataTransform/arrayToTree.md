@@ -49,6 +49,7 @@ treeList 树形数组
 <script lang="ts" setup>
     import { arrayToTree } from '../../lib/dataTransform.ts';
     import { ref, computed } from 'vue';
+    window.arrayToTree = arrayToTree;
     const array = [
         {
             id: "1-1",

@@ -24,6 +24,7 @@ rgb颜色格式 例如 rgb(255,0,0)
 <script lang="ts" setup>
     import { HexToRgb } from '../../lib/color.ts';
     import { ref, computed } from 'vue';
+    window.HexToRgb = HexToRgb;
     const hex = ref("#ff0000");
     const rgb = computed(() => HexToRgb(hex.value))
 </script>
