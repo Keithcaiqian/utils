@@ -85,7 +85,7 @@
   }
   button[disabled],
   button.disabled {
-    cursor: default;
+    cursor: not-allowed;
     background-color: var(--vp-c-disabled-bg);
     color: var(--vp-c-disabled-fg);
     border-bottom: 2px solid var(--vp-c-disabled-bg);

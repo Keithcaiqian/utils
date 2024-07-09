@@ -1,11 +1,11 @@
 {
   "name": "@daitoue/utils",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "author": "daitoue",
   "license": "MIT",
   "description": "自用的常用方法",
-  "keywords": ["color", "data", "transform", "file"],
+  "keywords": ["color", "data", "transform", "file", "redo", "undo"],
   "files": [
     "dist"
   ],

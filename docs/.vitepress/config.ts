@@ -28,6 +28,13 @@ export default defineConfig({
         ]
       },
       {
+        text: '撤销回退',
+        items: [
+          { text: 'UndoManager', link: '/undoManager/UndoManager' },
+          { text: 'RUndoManager', link: '/undoManager/RUndoManager' },
+        ]
+      },
+      {
         text: '文件',
         items: [
           { text: 'downloadPicture', link: '/file/downloadPicture' },
